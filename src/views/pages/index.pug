@@ -45,11 +45,11 @@ html(lang="en")
                      min="0", 
                      max="4"
                   )
-               label.form__price(for="price-input")
+               label.form__price(for="price-range")
                   span.form__number#price $16.00 
                   span.form__period#period / month 
             .form__body
-               label.form__screen-reader-only(for="duration") Monthly Billing or Yearly Billing ?
+               label.form__screen-reader-only(for="billing") Monthly Billing or Yearly Billing ?
                label.form__billing(for="billing", aria-hidden="true") Monthly Billing
                input.form__checkbox#billing(name="duration", type="checkbox")
                label.form__billing.form__billing--year(for="billing", aria-hidden="true") Yearly Billing
