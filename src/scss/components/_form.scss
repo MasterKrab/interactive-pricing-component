@@ -45,9 +45,14 @@
       background-color: c.$light-grayish-blue-empty;
       border-radius: 1rem;
       position: relative;
+      -moz-appearance: none;
 
       @media screen and (min-width: 768px){
          grid-area: 2 / 1 / 3 / 3;
+      }
+
+      &::-moz-range-track{
+         background-color: c.$light-grayish-blue-empty;
       }
 
       &:focus{
@@ -65,8 +70,8 @@
          left: 0;
          border-radius: 1rem;
       }
-      
-      &::-webkit-slider-thumb{
+
+      @mixin slider-thumb{
          appearance: none;
          width: 50px;
          height: 50px;
@@ -79,6 +84,7 @@
          box-shadow: 0 10px 15px 8px c.$soft-cyan;
          position: relative;
          z-index: 100;
+         cursor: pointer;
          
          @media screen and (min-width: 768px) {
             transition: background-color 0.2s;
@@ -87,6 +93,19 @@
                background-color: lighten(c.$strong-cyan, 10%);
             }
          }
+      }
+
+      &::-moz-range-thumb{
+         @include slider-thumb();
+         border: none;
+      }
+      
+      &::-webkit-slider-thumb{
+         @include slider-thumb()
+      }
+
+      &:active::-moz-range-thumb{
+         background-color: darken(c.$strong-cyan, 10%);
       }
 
       &:active::-webkit-slider-thumb{
@@ -132,6 +151,7 @@
       position: relative;
       margin-left: 10px;
       margin-right: 10px;
+      cursor: pointer;
       transition: background-color 0.2s;
 
       @media screen and (min-width: 350px){
@@ -171,6 +191,7 @@
 
    &__billing{
          font-size: 0.75rem;
+         cursor: pointer;
          
          @media screen and (min-width: 768px){
             font-size: 0.9rem;
