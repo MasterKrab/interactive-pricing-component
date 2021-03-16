@@ -25,3 +25,38 @@ html(lang="en")
       meta(name="theme-color", content="#ffffff")
       //- CSS
       link(rel="stylesheet", href="css/styles.css")
+      //- Fonts
+      link(rel="preconnect", href="https://fonts.gstatic.com")
+      //- Manrope
+      link(href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap",rel="stylesheet")
+   body 
+      header.main-header 
+         h1.title Simple, traffic-based pricing 
+         p.main-header__text 
+          |Sign-up for our 30-day trial. 
+          span.main-header__payment No credit card required.
+      main.main 
+         form.form(action="#")
+            .form__top
+               h2.form__title#page-views 100k Pageviews
+               input.form__range#price-range(
+                     type="range", 
+                     name="price", 
+                     min="0", 
+                     max="4"
+                  )
+               label.form__price(for="price-input")
+                  span.form__number#price $16.00 
+                  span.form__period#period / month 
+            .form__body
+               label.form__screen-reader-only(for="duration") Monthly Billing or Yearly Billing ?
+               label.form__billing(for="billing", aria-hidden="true") Monthly Billing
+               input.form__checkbox#billing(name="duration", type="checkbox")
+               label.form__billing.form__billing--year(for="billing", aria-hidden="true") Yearly Billing
+            .form__footer
+               ul.benefits
+                  li.benefits__item Unlimited websites
+                  li.benefits__item 100% data ownership
+                  li.benefits__item Email reports
+               button.form__submit(type="submit") Start my trial
+      script(src="js/scripts-min.js") 

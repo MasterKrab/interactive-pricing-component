@@ -1,0 +1,17 @@
+@use "abstracts/vars/colors" as c;
+
+html{
+   font-size: 15px;
+   font-family: Manrope, sans-serif;
+   background-image: url(../assets/img/bg-pattern.svg);
+   background-repeat: no-repeat;
+   background-position: top;
+
+   @media screen and (min-width: 1450px){
+      background-size: contain;
+   }
+}
+
+body{
+   min-height: 100vh;
+}

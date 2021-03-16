@@ -1,0 +1,33 @@
+@use "abstracts/vars/colors" as c;
+
+.main-header{
+   text-align: center;
+   padding: 1rem;
+   margin-top: 50px;
+
+   background-image: url(../assets/img/pattern-circles.svg);
+   background-repeat: no-repeat;
+   background-position: center;
+
+   &__text{
+      color: c.$grayish-blue;
+      line-height: 2;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   @media screen and (max-width: 768px){
+      &__payment{
+         display: block;
+      }
+   }
+}
+
+.title{
+   font-size: 1.5rem;
+   color: lighten(c.$dark-desaturated-blue, 5%);
+
+   @media screen and (min-width: 500px){
+      font-size: 2rem;
+   }
+}
