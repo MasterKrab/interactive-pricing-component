@@ -258,6 +258,11 @@
       @media screen and (max-width: 768px){
          margin-bottom: 1.5rem;
       }
+
+      &:focus{
+         outline: 3px dotted c.$dark-desaturated-blue;
+         outline-offset: 3px;
+      }
    }
 }
 
