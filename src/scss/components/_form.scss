@@ -254,6 +254,7 @@
       border: none;
       background-color: c.$dark-desaturated-blue;
       color: c.$pale-blue;
+      cursor: pointer;
 
       @media screen and (max-width: 768px){
          margin-bottom: 1.5rem;
